@@ -27,8 +27,11 @@ module App
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w(assets tasks))
-
+    config.i18n.default_locale = :en
     # Configuration for the application, engines, and railties goes here.
+    config.before_configuration do
+      config.database_configuration['test']['adapter'] = 'postgresql'
+    end
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.

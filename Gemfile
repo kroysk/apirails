@@ -38,7 +38,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
-  gem "rspec-rails", "~> 3.5"
+  gem "rspec-rails", "~> 4.0"
 end
 
 group :development do
@@ -49,8 +49,12 @@ group :development do
 end
 
 group :test do
-  gem 'factory_bot_rails', '~> 4.0'
-  gem 'shoulda-matchers', '~> 3.1'
-  gem 'faker', '~> 1.9'
-  gem 'database_cleaner', '~> 1.7'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'faker'
+  gem 'database_cleaner-active_record'
+  # gem 'factory_bot_rails'
+  # gem 'shoulda-matchers'
+  # gem 'faker'
+  # gem 'database_cleaner'
 end
