@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get "health" => "health#health"
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show, :create, :update]
 end
